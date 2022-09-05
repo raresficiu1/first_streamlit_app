@@ -2,6 +2,7 @@ import streamlit
 import requests
 import pandas
 import snowflake.connector
+import urllib.error import URLError
 
 variabile='kiwi'
 
