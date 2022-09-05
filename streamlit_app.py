@@ -6,9 +6,6 @@ import snowflake.connector
 variabile='kiwi'
 
 streamlit.header("Fruityvice Fruit Advice!")
-
-
-
 fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
 streamlit.write('The user entered ', fruit_choice)
 fruityvice_response = requests.get(f"https://fruityvice.com/api/fruit/{fruit_choice}")
@@ -32,11 +29,12 @@ streamlit.text(my_data_row)
 
 my_cur.execute("SELECT * from fruit_load_list")
 my_data_row = my_cur.fetchall()
-streamlit.header("Hello from Snowflake:")
 streamlit.dataframe(my_data_row)
 
 
 
 fruit_choice = streamlit.text_input('What fruid would you like to add?','Kiwi')
 streamlit.write('Thanks for adding', fruit_choice)
+my_data_row.append(fruit_choice)
+streamlit.dataframe(my_data_row)
 
