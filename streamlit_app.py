@@ -1,6 +1,8 @@
 import streamlit
 import requests
 import pandas
+import snowflake.connector
+
 variabile='kiwi'
 
 streamlit.header("Fruityvice Fruit Advice!")
