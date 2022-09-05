@@ -1,11 +1,11 @@
 import streamlit
 import requests
 import pandas
-
+variabile='kiwi'
 
 streamlit.header("Fruityvice Fruit Advice!")
 
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+fruityvice_response = requests.get(f"https://fruityvice.com/api/fruit/{variabile}")
 streamlit.text(fruityvice_response.json())
 
 
