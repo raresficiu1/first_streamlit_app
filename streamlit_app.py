@@ -1,5 +1,7 @@
 import streamlit
 import requests
+import pandas
+
 
 streamlit.header("Fruityvice Fruit Advice!")
 
